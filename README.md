@@ -1,5 +1,7 @@
 # Source-Aware Chinese Classifier Dataset & Baseline
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/moyx782/zh-classifier-pipeline/blob/master/train_colab.ipynb)
+
 This project builds a **source-aware JSONL dataset** for a *general-purpose word/sentence
 classifier* (通用词句分类器) based on GitHub open-source Chinese dictionary projects.
 
