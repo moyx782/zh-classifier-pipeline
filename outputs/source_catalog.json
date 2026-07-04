@@ -1,0 +1,101 @@
+{
+  "pwxcoo/chinese-xinhua": {
+    "source_repo": "https://github.com/pwxcoo/chinese-xinhua",
+    "license_hint": "Repo shows MIT license, but README says dictionary data was collected/scraped from the web. Suitable for research/prototyping; verify before commercial redistribution.",
+    "language_scope": "Simplified Chinese; words, idioms, characters, xiehouyu",
+    "recommended_role": "primary_bootstrap_source",
+    "raw_urls": {
+      "ci": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/ci.json",
+      "idiom": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/idiom.json",
+      "word": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/word.json",
+      "xiehouyu": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/xiehouyu.json"
+    },
+    "expected_fields": {
+      "ci": ["ci", "explanation"],
+      "idiom": ["word", "pinyin", "abbreviation", "explanation", "derivation", "example"],
+      "word": ["word", "oldword", "strokes", "pinyin", "radicals", "explanation", "more"],
+      "xiehouyu": ["riddle", "answer"]
+    }
+  },
+  "g0v/moedict-data": {
+    "source_repo": "https://github.com/g0v/moedict-data",
+    "license_hint": "Community-driven derivative of Taiwan Ministry of Education dictionary data. Contains traditional Chinese definitions. CC0 / public domain dedication for the dataset structure; original dictionary text may have usage restrictions. Use as a supplemental source; do not redistribute raw text without verification.",
+    "language_scope": "Traditional / Taiwan Ministry of Education Mandarin dictionary; rich multi-sense definitions.",
+    "recommended_role": "supplemental_source",
+    "raw_urls": {
+      "dict-revised": "https://raw.githubusercontent.com/g0v/moedict-data/master/dict-revised_bkup.json"
+    },
+    "fetch_note": "Master file is dict-revised.json.xz (15MB compressed); we use dict-revised_bkup.json (75MB uncompressed) for simpler parsing. Build will skip if download is slow.",
+    "expected_fields": {
+      "dict-revised": ["title", "heteronyms", "radical", "non_radical_stroke_count", "total_stroke", "pinyin"]
+    }
+  },
+  "thunlp/THUOCL": {
+    "source_repo": "https://github.com/thunlp/THUOCL",
+    "license_hint": "Academic domain lexicon dataset from Tsinghua University (THUOCL - Tsinghua University Open Chinese Lexicon). Research/education use; verify licensing terms before commercial use. Each .txt file lists 'word freq' per domain.",
+    "language_scope": "Simplified Chinese; domain-specific word lists grouped by topical areas (IT, medical, finance, food, animals, poems, etc.)",
+    "recommended_role": "domain_enrichment_source",
+    "raw_urls": {
+      "IT": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_IT.txt",
+      "caijing": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_caijing.txt",
+      "car": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_car.txt",
+      "chengyu": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_chengyu.txt",
+      "diming": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_diming.txt",
+      "food": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_food.txt",
+      "law": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_law.txt",
+      "medical": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_medical.txt",
+      "poem": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_poem.txt",
+      "lishimingren": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_lishimingren.txt",
+      "animal": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_animal.txt"
+    },
+    "expected_fields": {
+      "_default": ["word", "freq"]
+    },
+    "domain_mapping": {
+      "IT": "SOFTWARE",
+      "caijing": "GENERAL",
+      "car": "GENERAL",
+      "chengyu": "CHINESE_DICTIONARY",
+      "diming": "GENERAL",
+      "food": "GENERAL",
+      "law": "GENERAL",
+      "medical": "GENERAL",
+      "poem": "CHINESE_DICTIONARY",
+      "lishimingren": "GENERAL",
+      "animal": "GENERAL"
+    }
+  },
+  "liuhuanyong/DomainWordsDict": {
+    "source_repo": "https://github.com/liuhuanyong/DomainWordsDict",
+    "license_hint": "Domain-specific Chinese word lists curated by academic researcher (liuhuanyong). Useful for domain label enrichment; verify license before commercial use. Each .txt file is a domain word list (one word per line or 'word freq').",
+    "language_scope": "Simplified Chinese; 30+ domain word dictionaries (philosophy, chemistry, medical, electronics, education, linguistics, etc.)",
+    "recommended_role": "domain_enrichment_source",
+    "raw_urls": {
+      "shijie_zhexue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E4%B8%96%E7%95%8C%E5%93%B2%E5%AD%A6.txt",
+      "dianzi_gongcheng": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E7%94%B5%E5%AD%90%E5%B7%A5%E7%A8%8B.txt",
+      "jixie_gongcheng": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E6%9C%BA%E6%A2%B0%E5%B7%A5%E7%A8%8B.txt",
+      "hanyu_yanxue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E6%B1%89%E8%AF%AD%E8%A8%80%E5%AD%A6.txt",
+      "jiaoyu_jiaoxue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E6%95%99%E8%82%B2%E6%95%99%E5%AD%A6.txt",
+      "wuli_kexue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E7%89%A9%E7%90%86%E7%A7%91%E5%AD%A6.txt",
+      "shuxue_kexue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E6%95%B0%E5%AD%A6%E7%A7%91%E5%AD%A6.txt",
+      "tianwen_kexue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E5%A4%A9%E6%96%87%E7%A7%91%E5%AD%A6.txt",
+      "huaxue_huagong": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E5%8C%96%E5%AD%A6%E5%8C%96%E5%B7%A5.txt",
+      "yiyao_yixue": "https://raw.githubusercontent.com/liuhuanyong/DomainWordsDict/master/data/%E5%8C%BB%E8%8D%AF%E5%8C%BB%E5%AD%A6.txt"
+    },
+    "expected_fields": {
+      "_default": ["word"]
+    },
+    "domain_mapping": {
+      "shijie_zhexue": "GENERAL",
+      "dianzi_gongcheng": "SOFTWARE",
+      "jixie_gongcheng": "SOFTWARE",
+      "hanyu_yanxue": "CHINESE_DICTIONARY",
+      "jiaoyu_jiaoxue": "GENERAL",
+      "wuli_kexue": "GENERAL",
+      "shuxue_kexue": "GENERAL",
+      "tianwen_kexue": "GENERAL",
+      "huaxue_huagong": "GENERAL",
+      "yiyao_yixue": "GENERAL"
+    }
+  }
+}

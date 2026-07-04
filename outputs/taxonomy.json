@@ -1,0 +1,25 @@
+{
+  "cognitive_labels": [
+    "ACTION_OPERATION",
+    "TOOL_SYSTEM",
+    "ERROR_PROBLEM",
+    "STATE_STATUS",
+    "DATA_INFO",
+    "GOAL_INTENT",
+    "METHOD_STRATEGY",
+    "RELATION_STRUCTURE",
+    "ENTITY_OBJECT",
+    "ATTRIBUTE_PROPERTY",
+    "CONCEPT_ABSTRACT",
+    "LANGUAGE_EXPRESSION"
+  ],
+  "domain_labels": [
+    "GENERAL",
+    "CHINESE_DICTIONARY",
+    "SOFTWARE",
+    "ML",
+    "ROBOTICS",
+    "NETWORK",
+    "AGENT_TOOLING"
+  ]
+}

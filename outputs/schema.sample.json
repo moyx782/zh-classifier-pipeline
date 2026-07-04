@@ -1,0 +1,26 @@
+{
+  "text": "接口调用失败",
+  "normalized_text": "接口调用失败",
+  "text_type": "technical_phrase",
+  "cognitive_labels": ["ACTION_OPERATION", "TOOL_SYSTEM", "ERROR_PROBLEM"],
+  "domain_labels": ["SOFTWARE", "GENERAL"],
+  "confidence": 0.85,
+  "needs_review": false,
+  "source_repo": "https://github.com/pwxcoo/chinese-xinhua",
+  "source_repo_key": "pwxcoo/chinese-xinhua",
+  "source_dataset": "ci",
+  "source_record_id": "ci:123",
+  "license_hint": "Repo shows MIT license, but README says dictionary data was collected/scraped from the web. Suitable for research/prototyping; verify before commercial redistribution.",
+  "raw_fields": {
+    "ci": "接口",
+    "explanation": "（软件或硬件间互相连接的端口或标准）调用失败时需要排查。"
+  },
+  "label_evidence": {
+    "ACTION_OPERATION": ["调用"],
+    "TOOL_SYSTEM": ["接口"],
+    "ERROR_PROBLEM": ["失败"]
+  },
+  "labeling_method": "source_default_labels + keyword_weak_supervision",
+  "labels_note": "Base labels from ci dataset; augmented by keyword weak supervision on text+explanation fields.",
+  "generator_version": "source-aware-jsonl-v2"
+}

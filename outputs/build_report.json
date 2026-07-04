@@ -1,0 +1,77 @@
+{
+  "total_samples": 359051,
+  "after_dedup": 359051,
+  "sources_processed": [
+    "pwxcoo/chinese-xinhua",
+    "g0v/moedict-data"
+  ],
+  "needs_review_count": 343203,
+  "confidence_stats": {
+    "min": 0.45,
+    "max": 0.95,
+    "avg": 0.5232,
+    "sum": 0.0
+  },
+  "source_repo_dataset_counts": {
+    "pwxcoo/chinese-xinhua/ci": 264384,
+    "pwxcoo/chinese-xinhua/idiom": 42519,
+    "pwxcoo/chinese-xinhua/word": 14975,
+    "pwxcoo/chinese-xinhua/xiehouyu": 37173
+  },
+  "text_type_counts": {
+    "word_or_phrase": 264384,
+    "idiom": 30895,
+    "example_sentence": 11624,
+    "character": 14975,
+    "xiehouyu_riddle": 14009,
+    "xiehouyu_answer": 9132,
+    "xiehouyu_pair": 14032
+  },
+  "cognitive_label_counts": {
+    "DATA_INFO": 278496,
+    "LANGUAGE_EXPRESSION": 359051,
+    "ENTITY_OBJECT": 25649,
+    "GOAL_INTENT": 4586,
+    "RELATION_STRUCTURE": 71862,
+    "ACTION_OPERATION": 9557,
+    "STATE_STATUS": 1554,
+    "CONCEPT_ABSTRACT": 32376,
+    "ERROR_PROBLEM": 2762,
+    "METHOD_STRATEGY": 2168,
+    "ATTRIBUTE_PROPERTY": 15965,
+    "TOOL_SYSTEM": 1457
+  },
+  "domain_label_counts": {
+    "CHINESE_DICTIONARY": 359051,
+    "ML": 424,
+    "NETWORK": 406,
+    "SOFTWARE": 627,
+    "ROBOTICS": 64,
+    "AGENT_TOOLING": 35
+  },
+  "raw_files_processed": [
+    {
+      "file": "ci.json",
+      "records": 264434,
+      "samples": 264434
+    },
+    {
+      "file": "idiom.json",
+      "records": 30895,
+      "samples": 61788
+    },
+    {
+      "file": "word.json",
+      "records": 16142,
+      "samples": 16142
+    },
+    {
+      "file": "xiehouyu.json",
+      "records": 14032,
+      "samples": 42096
+    }
+  ],
+  "review_threshold": 0.72,
+  "generator_version": "source-aware-jsonl-v2",
+  "truncate_len": 500
+}

@@ -1,0 +1,97 @@
+{
+  "fetch_timestamp": "2026-07-04T13:40:28",
+  "sources": {
+    "pwxcoo/chinese-xinhua": {
+      "status": "partial_or_failed",
+      "license_hint": "Repo shows MIT license, but README says dictionary data was collected/scraped from the web. Suitable for research/prototyping; verify before commercial redistribution.",
+      "recommended_role": "primary_bootstrap_source",
+      "files": {
+        "ci": {
+          "url": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/ci.json",
+          "local_path": "raw\\pwxcoo__chinese-xinhua\\ci.json",
+          "downloaded": true,
+          "size_bytes": 26129191,
+          "record_count": 264434,
+          "field_summary": {
+            "ci": 5000,
+            "explanation": 5000
+          },
+          "error": null
+        },
+        "idiom": {
+          "url": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/idiom.json",
+          "local_path": "raw\\pwxcoo__chinese-xinhua\\idiom.json",
+          "downloaded": true,
+          "size_bytes": 10319857,
+          "record_count": 30895,
+          "field_summary": {
+            "derivation": 5000,
+            "example": 5000,
+            "explanation": 5000,
+            "pinyin": 5000,
+            "word": 5000,
+            "abbreviation": 5000
+          },
+          "error": null
+        },
+        "word": {
+          "url": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/word.json",
+          "local_path": "raw\\pwxcoo__chinese-xinhua\\word.json",
+          "downloaded": true,
+          "size_bytes": 27354320,
+          "record_count": 16142,
+          "field_summary": {
+            "word": 5000,
+            "oldword": 5000,
+            "strokes": 5000,
+            "pinyin": 5000,
+            "radicals": 5000,
+            "explanation": 5000,
+            "more": 5000
+          },
+          "error": null
+        },
+        "xiehouyu": {
+          "url": "https://raw.githubusercontent.com/pwxcoo/chinese-xinhua/master/data/xiehouyu.json",
+          "local_path": "raw\\pwxcoo__chinese-xinhua\\xiehouyu.json",
+          "downloaded": true,
+          "size_bytes": 1272390,
+          "record_count": 14032,
+          "field_summary": {
+            "riddle": 5000,
+            "answer": 5000
+          },
+          "error": null
+        }
+      }
+    },
+    "g0v/moedict-data": {
+      "status": "partial_or_failed",
+      "license_hint": "Community-driven derivative of Taiwan Ministry of Education dictionary data. Contains traditional Chinese definitions. CC0 / public domain dedication for the dataset structure; original dictionary text may have usage restrictions. Use as a supplemental source; do not redistribute raw text without verification.",
+      "recommended_role": "supplemental_source",
+      "files": {
+        "dict-revised": {
+          "url": "https://raw.githubusercontent.com/g0v/moedict-data/master/dict-revised.json",
+          "local_path": "raw\\g0v__moedict-data\\dict-revised.json",
+          "downloaded": false,
+          "size_bytes": 0,
+          "record_count": 0,
+          "field_summary": {},
+          "error": "HTTP Error 404: Not Found"
+        }
+      }
+    },
+    "thunlp/THUOCL": {
+      "status": "no_raw_urls",
+      "license_hint": "Academic domain lexicon dataset from Tsinghua University. Typically used for research/education; verify licensing terms before commercial use. Chinese Thematic Word List organized by domains.",
+      "recommended_role": "candidate_supplemental_source",
+      "files": {}
+    },
+    "liuhuanyong/DomainWordsDict": {
+      "status": "no_raw_urls",
+      "license_hint": "Domain-specific Chinese word lists curated by academic researcher. Useful for domain label enrichment; verify license before commercial use.",
+      "recommended_role": "candidate_supplemental_source",
+      "files": {}
+    }
+  }
+}
