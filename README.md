@@ -242,3 +242,19 @@ It is **not human gold-standard** data. Labels are noisy and should be reviewed 
 Check `license_hint` on every sample and the upstream repo before redistributing any raw fields.
 
 `generator_version`: `source-aware-jsonl-v2`
+
+---
+
+## 10. Clef Flash benchmark (optional, independent)
+
+An independent benchmark lives in `benchmarks/` and does **not** modify training. It compares the existing LR baseline with local Ollama `clef-flash` on the same JSONL texts, reporting label agreement, coverage, per-class weak-label errors, and inference latency.
+
+```bash
+# No Ollama/model required; validates the benchmark/report pipeline only
+python benchmarks/clef_flash_benchmark.py --dry-run
+
+# Live comparison (Ollama >= 0.35.1 and `ollama pull clef-flash` required)
+python benchmarks/clef_flash_benchmark.py --limit 24
+```
+
+See `benchmarks/README.md`. JSONL `cognitive_labels` are weak-supervision references, not human gold labels.
