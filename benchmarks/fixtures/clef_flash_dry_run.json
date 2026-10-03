@@ -1,0 +1,70 @@
+{
+  "fixture": "synthetic smoke fixture for report generation only",
+  "synthetic": true,
+  "samples": [
+    {
+      "index": 1,
+      "text": "接口调用失败",
+      "source_record_id": "dry:1",
+      "reference_labels": ["ACTION_OPERATION", "TOOL_SYSTEM", "ERROR_PROBLEM"],
+      "baseline": {
+        "labels": ["ACTION_OPERATION", "TOOL_SYSTEM", "ERROR_PROBLEM"],
+        "scores": {"ACTION_OPERATION": 0.82, "TOOL_SYSTEM": 0.79, "ERROR_PROBLEM": 0.94},
+        "latency_ms": 1.8
+      },
+      "clef_flash": {
+        "labels": ["TOOL_SYSTEM", "ERROR_PROBLEM"],
+        "scores": {"ACTION_OPERATION": 0.41, "TOOL_SYSTEM": 0.93, "ERROR_PROBLEM": 0.97},
+        "latency_ms": 46.0
+      }
+    },
+    {
+      "index": 2,
+      "text": "机器人路径规划",
+      "source_record_id": "dry:2",
+      "reference_labels": ["ENTITY_OBJECT", "GOAL_INTENT", "METHOD_STRATEGY"],
+      "baseline": {
+        "labels": ["ENTITY_OBJECT", "METHOD_STRATEGY"],
+        "scores": {"ENTITY_OBJECT": 0.88, "GOAL_INTENT": 0.47, "METHOD_STRATEGY": 0.73},
+        "latency_ms": 1.6
+      },
+      "clef_flash": {
+        "labels": ["ENTITY_OBJECT", "GOAL_INTENT", "METHOD_STRATEGY"],
+        "scores": {"ENTITY_OBJECT": 0.92, "GOAL_INTENT": 0.71, "METHOD_STRATEGY": 0.89},
+        "latency_ms": 39.0
+      }
+    },
+    {
+      "index": 3,
+      "text": "数据库连接处于只读状态",
+      "source_record_id": "dry:3",
+      "reference_labels": ["TOOL_SYSTEM", "RELATION_STRUCTURE", "STATE_STATUS", "ATTRIBUTE_PROPERTY"],
+      "baseline": {
+        "labels": ["TOOL_SYSTEM", "STATE_STATUS", "ATTRIBUTE_PROPERTY"],
+        "scores": {"TOOL_SYSTEM": 0.91, "RELATION_STRUCTURE": 0.45, "STATE_STATUS": 0.84, "ATTRIBUTE_PROPERTY": 0.77},
+        "latency_ms": 1.9
+      },
+      "clef_flash": {
+        "labels": ["TOOL_SYSTEM", "RELATION_STRUCTURE", "STATE_STATUS", "ATTRIBUTE_PROPERTY"],
+        "scores": {"TOOL_SYSTEM": 0.95, "RELATION_STRUCTURE": 0.69, "STATE_STATUS": 0.91, "ATTRIBUTE_PROPERTY": 0.81},
+        "latency_ms": 41.0
+      }
+    },
+    {
+      "index": 4,
+      "text": "语义表征是一种抽象概念",
+      "source_record_id": "dry:4",
+      "reference_labels": ["DATA_INFO", "CONCEPT_ABSTRACT", "LANGUAGE_EXPRESSION"],
+      "baseline": {
+        "labels": ["DATA_INFO", "CONCEPT_ABSTRACT", "LANGUAGE_EXPRESSION"],
+        "scores": {"DATA_INFO": 0.65, "CONCEPT_ABSTRACT": 0.89, "LANGUAGE_EXPRESSION": 0.76},
+        "latency_ms": 1.7
+      },
+      "clef_flash": {
+        "labels": ["CONCEPT_ABSTRACT", "LANGUAGE_EXPRESSION"],
+        "scores": {"DATA_INFO": 0.43, "CONCEPT_ABSTRACT": 0.96, "LANGUAGE_EXPRESSION": 0.83},
+        "latency_ms": 43.0
+      }
+    }
+  ]
+}
